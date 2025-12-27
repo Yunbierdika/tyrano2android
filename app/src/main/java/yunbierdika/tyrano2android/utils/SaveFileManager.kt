@@ -62,7 +62,7 @@ class SaveFileManager(
                         val buffer = CharArray(8192)
                         var read: Int
                         while ((br.read(buffer).also { read = it }) != -1) {
-                            resultBuilder.append(buffer, 0, read)
+                            resultBuilder.appendRange(buffer, 0, read)
                         }
                     }
                 }

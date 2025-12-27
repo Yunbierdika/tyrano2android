@@ -1,8 +1,8 @@
 [versions]
-agp = "8.13.0"
-kotlin = "2.2.21"
-activityKtx = "1.11.0"
-webkit = "1.14.0"
+agp = "8.13.2"
+kotlin = "2.3.0"
+activityKtx = "1.12.2"
+webkit = "1.15.0"
 
 [libraries]
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }

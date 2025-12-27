@@ -33,10 +33,12 @@ class JavaScriptInterface(
             AlertDialog.Builder(activity)
                 .setTitle(R.string.back_pressed_title)
                 .setMessage(R.string.back_pressed_message)
-                .setPositiveButton(R.string.back_pressed_positive) { dialog: DialogInterface?, which: Int -> {
-                    activity.finish()
-                    activity.startActivity(activity.intent)
-                }}
+                .setPositiveButton(R.string.back_pressed_positive) { dialog: DialogInterface?, which: Int ->
+                    run {
+                        activity.finish()
+                        activity.startActivity(activity.intent)
+                    }
+                }
                 .setNegativeButton(R.string.back_pressed_negative, null)
                 .show()
         }
