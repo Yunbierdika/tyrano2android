@@ -66,7 +66,7 @@ class MainActivity : ComponentActivity() {
                 AlertDialog.Builder(this@MainActivity)
                     .setTitle(R.string.back_pressed_title)
                     .setMessage(R.string.back_pressed_message)
-                    .setPositiveButton(R.string.back_pressed_positive) { dialog: DialogInterface?, which: Int -> finish() }
+                    .setPositiveButton(R.string.back_pressed_positive) { _: DialogInterface?, _: Int -> finish() }
                     .setNegativeButton(R.string.back_pressed_negative, null)
                     .show()
             }
@@ -96,6 +96,7 @@ class MainActivity : ComponentActivity() {
 
             // 允许WebView访问本地文件
             allowFileAccess = true
+            allowContentAccess = true
 
             // 设置缓存模式为本地缓存模式
             cacheMode = WebSettings.LOAD_CACHE_ONLY

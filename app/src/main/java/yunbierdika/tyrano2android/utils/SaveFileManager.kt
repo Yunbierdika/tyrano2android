@@ -47,7 +47,7 @@ class SaveFileManager(
     }
 
     // 加载存档
-    fun getStorage(key: String): String? {
+    fun getStorage(key: String): String {
         val savePath = "$saveDir/$key.sav"
         val resultBuilder = StringBuilder()
         try {
